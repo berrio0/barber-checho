@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CHECHOBARBER</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Logo -->
+    <link href="img/checho.jpg" rel="icon">
+
+    <!-- Fuentes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos fuentes Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Librerias Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Registroy inicio-->
+    <link rel="preload" href="css/Inicio.css" as="style">
+    <link href="css/Inicio.css" rel="stylesheet">
+    <link rel="preload" href="css/registro.css" as="style">
+    <link href="css/registro.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master.css">
+
+</head>
+
+<body>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <img src="img/checho.jpg" alt="Avatar" class="avatar">
+
+                <label for="text"><b>
+                        <center>Usuario</center>
+                    </b></label>
+                <input type="text" placeholder="Ingresar Usuario" name="psw" required>
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingresar contraseña" name="psw" required>
+                <input type="button" value="Click Me" style="float: right;">
+
+                
+                <button type="submit">Inciar</button>
+
+                <label> <br>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancelar</button>
+                <span class="psw">Olvidaste <a href="#">tu contraseña?</a></span>
+            </div>
+        </form>
+    </div>
+
+    
+    <div id="id02" class="modal2">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close2"
+            title="Close Modal">&times;</span>
+
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <img src="img/checho.jpg" alt="Avatar" class="avatar">
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Ingresar Email" name="email" required>
+
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingresar contraseña" name="psw" required>
+
+                <label for="psw-repeat"><b>Repite contraseña</b></label>
+                <input type="password" placeholder="Repite contraseña" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>Al crear una cuenta, usted acepta nuestros <a href="#" style="color:dodgerblue">Terminos y
+                        privacidad</a>.</p>
+
+                <div class="clearfix2">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                        class="cancelbtn2">Cancelar</button>
+                    <button type="submit" class="signupbtn2">Crear cuenta</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Inicio giratorio -->
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">
+                <Cargando class=""></Cargando>
+            </span>
+        </div>
+    </div>
+    <!-- Fin giratorio -->
+
+
+    <!-- Inicio Navegacion -->
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="mb-0 text-primary text-uppercase"><i class="fa fa-cut me-3"></i>CHECHOBARBER</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                <a href="servicios.html" class="nav-item nav-link">Servicios</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Paginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="precios.html" class="dropdown-item">Precios</a>
+                        <a href="horarios.html" class="dropdown-item">Horarios Laborales</a>
+                    </div>
+                </div>
+                <a href="contacto.html" class="nav-item nav-link">contacto</a>
+        
+                    <div class="boton1">
+                        <button onclick="document.getElementById('id01').style.display='block'">Iniciar</button>
+                    </div> 
+
+                    <div>
+                        <button onclick="document.getElementById('id02').style.display='block'"> Registro</button>
+                    </div>
+        </div>
+    </nav>
+    <!-- Fin Navegacion -->
+
+
+    <!-- Inicio Carrusel -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">El mejor corte
+                                exotico</h1>
+                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                    class="fa fa-map-marker-alt text-primary me-3"></i>Medellin</h4>
+                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                    class="fa fa-phone-alt text-primary me-3"></i>+57 3014401156</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">Cortes distintivos
+                            </h1>
+                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                    class="fa fa-map-marker-alt text-primary me-3"></i>Medellin</h4>
+                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                    class="fa fa-phone-alt text-primary me-3"></i>+57 3014401156</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previos</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+    <!-- Fin Carrusel -->
+
+    <!-- Inicio Servicios -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Servicios</p>
+                <h1 class="text-uppercase">Lo que proporcionamos</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <img class="img-fluid" src="img/haircut.png" alt="">
+                        </div>
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Cortes</h3>
+                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam.</p>
+                            <span class="text-uppercase text-primary">Precios $15.000</span>
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <img class="img-fluid" src="img/beard-trim.png" alt="">
+                        </div>
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Corte de barba</h3>
+                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam.</p>
+                            <span class="text-uppercase text-primary">Precios $15.000</span>
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <img class="img-fluid" src="img/mans-shave.png" alt="">
+                        </div>
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Afeitado y Cejas</h3>
+                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam.</p>
+                            <span class="text-uppercase text-primary">Precios $10.000</span>
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Fin Servicio -->
+
+
+    <!-- Inicio Precios -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center p-5">
+                        <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">Plan de Precios</p>
+                        <h1 class="text-uppercase mb-4">Consulte Nuestros Servicios Y Precios CHECHOBARBER</h1>
+                        <div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Corte de pelo</h6>
+                                <span class="text-uppercase text-primary">$15.000</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Corte de barba</h6>
+                                <span class="text-uppercase text-primary">$15.000</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Afeitado y Cejas</h6>
+                                <span class="text-uppercase text-primary">$10.000</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <img class="img-fluid h-100" src="img/price.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Precios -->
+
+
+    <!-- Inicio Cortes -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Cortes</p>
+                <h1 class="text-uppercase">Algunos Cortes de pelo</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/team11.jpg" alt="">
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h5 class="text-uppercase">Fade</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/team22.jpg" alt="">
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h5 class="text-uppercase">El 7</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/team33.jpg" alt="">
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h5 class="text-uppercase">Mullet</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/team44 (1).jpg" alt="">
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h5 class="text-uppercase">Mohicano</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Cortes -->
+
+
+    <!-- Inicio Horarios -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100">
+                        <img class="img-fluid h-100" src="img/open.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center p-5">
+                        <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">Horas Laborales</p>
+                        <h1 class="text-uppercase mb-4">TE ESTÁMOS ESPERANDO</h1>
+                        <div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">LUNES</h6>
+                                <span class="text-uppercase">09 AM - 09 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">MARTES</h6>
+                                <span class="text-uppercase">09 AM - 09 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">MIÉRCOLES</h6>
+                                <span class="text-uppercase">09 AM - 09 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">JUEVES</h6>
+                                <span class="text-uppercase">09 AM - 09 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">VIERNES</h6>
+                                <span class="text-uppercase">09 AM - 09 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between py-2">
+                                <h6 class="text-uppercase mb-0">Sabado / Domingo</h6>
+                                <span class="text-uppercase text-primary">Cerrado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Horarios -->
+
+    <!-- Parte inferior inicio -->
+
+    <div class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-uppercase mb-4">PONERSE EN CONTACTO</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="btn-square bg-dark flex-shrink-0 me-3">
+                            <span class="fa fa-map-marker-alt text-primary"></span>
+                        </div>
+                        <span>Cr 59 DD Medellin</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="btn-square bg-dark flex-shrink-0 me-3">
+                            <span class="fa fa-phone-alt text-primary"></span>
+                        </div>
+                        <span>+57 3014401156</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="btn-square bg-dark flex-shrink-0 me-3">
+                            <span class="fa fa-envelope-open text-primary"></span>
+                        </div>
+                        <span>hugoberrio023@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">CHECHOBARBER - Hugo Berrio</a>, Todos los Derechos
+                    Reservados.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Parte inferior final -->
+
+
+    <!-- Volver Arriba -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Librerias -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
